@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+  <providers>
+    <!-- <provider class="org.sekon.sns.index.provider.uc.UcIndexDocumentProvider">
+	    <params>
+	    	<param name="ebmAdress">127.0.0.1</param>
+	    	<param name="buffSize">100</param>
+	    </params>
+    </provider>-->
+    
+    <provider class="org.sekon.sns.index.provider.uc.UcIndexDocumentProvider">
+      <params>
+        <param name="MDDB_HOST">193.233.14.12</param>
+        <param name="MDDB_PORT">5984</param>
+        <param name="MDDB_LOGIN">admin</param>
+        <param name="MDDB_PASSWORD">adminpwd</param>
+        
+        <param name="DDS_HOST">193.233.14.12</param>
+        <param name="DDS_PORT">5984</param>
+        <param name="DDS_LOGIN">admin</param>
+        <param name="DDS_PASSWORD">adminpwd</param>       
+        <param name="COLLECTION_NAME">uc</param>
+        <param name="NEED_FULL_TEXT">0</param>
+        <param name="FROM_DATE">2012.02.24 13:40:59</param>
+        <param name="TO_DATE">2020.01.01 22:59:59</param>
+      </params>
+    </provider>
+    
+    <!--<provider class="org.sekon.sns.index.provider.mddb.MddbIndexDocumentProvider">
+      <params>
+        <param name="MDDB_HOST">193.233.14.12</param>
+        <param name="MDDB_PORT">5984</param>
+        <param name="MDDB_LOGIN">admin</param>
+        <param name="MDDB_PASSWORD">adminpwd</param>
+        
+        <param name="DDS_HOST">193.233.14.12</param>
+        <param name="DDS_PORT">5984</param>
+        <param name="DDS_LOGIN">admin</param>
+        <param name="DDS_PASSWORD">adminpwd</param>
+        
+        
+        <param name="COLLECTION_NAME">vnmos</param>
+        <param name="DB_NAME">document</param>
+        
+        <param name="VIEW_ARCHIVED">vnmos_archived</param>
+        <param name="VIEW_MODIFIED">vnmos_modified</param>
+        
+        <param name="MAPPING_1">title_t:S:Title</param>
+        <param name="MAPPING_2">text_t:A:</param>
+        <param name="MAPPING_3">isUser_i:E:DateAccepted</param>
+      </params>
+    </provider>-->
+  </providers>
+</config>
