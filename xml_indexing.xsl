@@ -27,8 +27,11 @@
 <!-- match on marcxml record -->
 <xsl:template match="record">
     <doc>
+    	<!-- идннтификатор записи -->
         <xsl:call-template name="local_number"/>
+        <!-- Заглавие -->
         <xsl:call-template name="title"/>
+        <!-- Автор -->
         <xsl:call-template name="author"/>
         <!-- <xsl:call-template name="subject_heading"/>-->
         <!-- <xsl:call-template name="subject_subheading"/>-->
@@ -236,9 +239,6 @@
             <xsl:for-each select="subfield[@id='a']">
                 <field name="subject_heading">
                     <xsl:value-of select="."/>
-                    <xsl:if test="../subfield[@id='x']">
-                        [<xsl:value-of select="../subfield[@id='x']"/>]
-                    </xsl:if>
                 </field>
             </xsl:for-each>
         </xsl:if>
@@ -365,11 +365,6 @@
                 <xsl:text>true</xsl:text>
             </field>
           </xsl:when>
-          <xsl:otherwise>
-            <field name="has_e_version">
-                <xsl:text>false</xsl:text>
-            </field>
-          </xsl:otherwise>
         </xsl:choose>
 </xsl:template>
 
