@@ -1,0 +1,95 @@
+{
+    "sns_service_url": "http://193.233.14.13:8080/SNSApi/",
+	"nsi_service_url": "http://193.233.14.12:8090/",
+	"providers":[
+		{
+			"class": "org.sekon.sns.index.provider.uc.UcIndexDocumentProvider",
+            "params": {
+                "MDDB_HOST": "192.168.120.24",
+                "MDDB_PORT": "5984",
+                "MDDB_LOGIN": "admin",
+                "MDDB_PASSWORD": "adminpwd",
+                
+                "DDS_HOST": "192.168.120.24",
+                "DDS_PORT": "5984",
+                "DDS_LOGIN": "admin",
+                "DDS_PASSWORD": "adminpwd",
+                
+                "COLLECTION_NAME": "uc",
+                "NEED_FULL_TEXT": "1",
+                "FROM_DATE": "2011.08.29 00:00:00",
+                "TO_DATE": "2020.01.01 22:59:59"
+            }
+		},
+        {
+			"class": "org.sekon.sns.index.provider.mddb.MddbIndexDocumentProvider",
+            "params": {
+                "MDDB_HOST": "192.168.120.24",
+                "MDDB_PORT": "5984",
+                "MDDB_LOGIN": "admin",
+                "MDDB_PASSWORD": "adminpwd",
+                
+                "DDS_HOST": "192.168.120.24",
+                "DDS_PORT": "5984",
+                "DDS_LOGIN": "admin",
+                "DDS_PASSWORD": "adminpwd",
+                
+                "COLLECTION_NAME": "vnmos",
+                "DB_NAME": "document",
+                "VIEW_ARCHIVED": "vnmos_archived",
+                "VIEW_MODIFIED": "vnmos_modified",
+                
+                "MAPPING_1": "title_t:S:Title",
+                "MAPPING_2": "text_t:A:",
+                "MAPPING_3": "state_s:S:State",
+                "MAPPING_4": "editor_t:S:Editor",
+                "MAPPING_5": "creator_t:S:Creator"
+            }
+        },
+        {
+    		"class": "org.sekon.sns.index.provider.mddb.MddbIndexDocumentProvider",
+            "params": {
+                "MDDB_HOST": "192.168.120.24",
+                "MDDB_PORT": "5984",
+                "MDDB_LOGIN": "admin",
+                "MDDB_PASSWORD": "adminpwd",
+                
+                "DDS_HOST": "192.168.120.24",
+                "DDS_PORT": "5984",
+                "DDS_LOGIN": "admin",
+                "DDS_PASSWORD": "adminpwd",
+                
+                "COLLECTION_NAME": "orgunit",
+                "DB_NAME": "organizationunit",
+                "VIEW_ARCHIVED": "archived",
+                "VIEW_MODIFIED": "modified",
+                
+                "MAPPING_1": "address_t:S:PostAddress",
+                "MAPPING_2": "title_t:S:Title"
+            }
+        },
+    	{
+			"class": "org.sekon.sns.index.provider.mddb.MddbIndexDocumentProvider",
+            "params": {
+                "MDDB_HOST": "192.168.120.24",
+                "MDDB_PORT": "5984",
+                "MDDB_LOGIN": "admin",
+                "MDDB_PASSWORD": "adminpwd",
+                
+                "DDS_HOST": "192.168.120.24",
+                "DDS_PORT": "5984",
+                "DDS_LOGIN": "admin",
+                "DDS_PASSWORD": "adminpwd",
+                
+                "COLLECTION_NAME": "news",
+                "DB_NAME": "news",
+                "VIEW_ARCHIVED": "archived_by_date",
+                "VIEW_MODIFIED": "modified",
+                
+                "MAPPING_1": "content_t:S:Content",
+                "MAPPING_2": "title_t:S:Title",
+                "MAPPING_3": "user_s:S:Editor"
+            }
+		}
+	]
+}
